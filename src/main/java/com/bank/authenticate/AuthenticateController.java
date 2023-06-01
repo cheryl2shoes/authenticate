@@ -2,11 +2,10 @@ package com.bank.authenticate;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +16,8 @@ import org.springframework.web.server.ResponseStatusException;
 public class AuthenticateController {
 
 
-    private Map<String,Users> db =new HashMap<>(){{
-        put("Cheryl Moshoeshoe",new Users("Cheryl Moshoeshoe","ch!!ER07"));
+    Map<String,Users> db =new HashMap<>(){{
+        put("Cheryl Moshoeshoe",new Users("CherylMoshoeshoe","ch!!ER07"));
     }};
     //private List<Users> db= List.of(new Users("Cheryl Moshoeshoe","ch!!ER07"));
 
@@ -44,6 +43,8 @@ public class AuthenticateController {
         return user;
     
     }
+    
+        
     
 
 }

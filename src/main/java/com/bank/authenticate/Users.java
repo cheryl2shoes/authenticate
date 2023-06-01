@@ -1,6 +1,14 @@
 package com.bank.authenticate;
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 public class Users {
+
+
+
+    /*
+ */
     
    
     private String username;
@@ -20,6 +28,15 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @PostMapping("/authenticate/")
+    public Users create(AuthenticateController authenticateController){
+    
+        authenticateController.db.put(getUsername(),this);
+    
+    
+        return this;
     }
 
     public Users() {
